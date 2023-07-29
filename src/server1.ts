@@ -1,12 +1,15 @@
 import express, { Response } from 'express';
+import morgan from 'morgan';
+require('dotenv').config();
+
 import { getConnectionAndChannel } from './rmq';
 import { M1_QUEUE, M2_QUEUE } from './constants';
-require('dotenv').config();
 
 const app = express();
 const PORT = process.env.PORT || 3001;
 
 app.use(express.json());
+app.use(morgan(':method :url :status :res[content-length] - :response-time ms'));
 
 export async function sendToM2(data: unknown) {
 	try {
