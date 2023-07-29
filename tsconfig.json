@@ -1,0 +1,17 @@
+{
+	"compilerOptions": {
+		"target": "es6",
+		"module": "commonjs",
+		"outDir": "./dist",
+		"rootDir": "./src",
+		"strict": true,
+		"noImplicitAny": false,
+		"sourceMap": true,
+		"allowSyntheticDefaultImports": true,
+		"incremental": true,
+		"skipLibCheck": true,
+		"strictNullChecks": false,
+		"strictBindCallApply": false,
+		"esModuleInterop": true
+	}
+}
